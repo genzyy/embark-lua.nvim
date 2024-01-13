@@ -325,6 +325,15 @@ M.colorscheme = function()
   highlight(0, 'DiagnosticInfo', { fg = colors.norm_subtle })
   highlight(0, 'DiagnosticHint', { fg = colors.norm })
   highlight(0, 'DiagnosticOk', { fg = colors.dark_green })
+
+  -- noice color support
+  highlight(0, 'NoiceCmdlinePopup', { fg = colors.norm })
+  highlight(0, 'NoiceCmdlinePopupBorder', { fg = colors.norm })
+  highlight(0, 'NoiceCmdlinePopupBorderSearch', { fg = colors.norm })
+  highlight(0, 'NoiceCmdlinePrompt', { fg = colors.norm })
+  highlight(0, 'NoiceCompletionItemKindDefault', { fg = colors.green })
+  highlight(0, 'NoiceConfirmBorder', { fg = colors.norm })
+  highlight(0, 'NoiceFormatTitle', { fg = colors.norm })
 end
 
 return M
