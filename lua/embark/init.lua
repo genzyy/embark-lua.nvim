@@ -3,6 +3,25 @@ local none = 'NONE'
 
 local M = {}
 
+--- @class StyleProps
+--- @field bold boolean
+--- @field italic boolean
+local style_props = {
+  bold = true,
+  italic = true,
+}
+
+--- @class EmbarkConf
+--- @field style table
+ M.config = {
+  styles = {
+    --- @type StyleProps
+    keywords = { bold = true, italic = true },
+    --- @type StyleProps
+    comments = { bold = false, italic = true },
+  }
+}
+
 local colors = {
   bg = '#1e1c31',
   bg_dark = '#100e23',
@@ -49,7 +68,8 @@ M.colorscheme = function()
   highlight(0, 'ModeMsg', { fg = colors.norm_subtle })
 
   -- Comments
-  highlight(0, 'Comment', { fg = colors.norm_subtle })
+  highlight(0, 'Comment',
+    { fg = colors.norm_subtle, bold = M.config.styles.comments.bold, italic = M.config.styles.comments.italic })
 
   -- Functions
   highlight(0, 'Function', { fg = colors.red })
@@ -294,7 +314,8 @@ M.colorscheme = function()
   highlight(0, '@lsp.type.operator', { link = '@operator' })
   highlight(0, '@lsp.type.parameter', { link = '@parameter' })
   highlight(0, '@lsp.type.property', { link = '@property' })
-  highlight(0, '@lsp.type.selfKeyword', { link = '@variable.builtin' })
+  highlight(0, '@lsp.type.selfKeyword',
+    { link = '@variable.builtin', bold = M.config.styles.keywords.bold, italic = M.config.styles.keywords.italic, })
   highlight(0, '@lsp.type.selfParameter', { link = '@variable.builtin' })
   highlight(0, '@lsp.type.string', { link = '@string' })
   highlight(0, '@lsp.type.struct', { link = '@type' })
