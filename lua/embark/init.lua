@@ -357,8 +357,8 @@ M.colorscheme = function()
   highlight(0, 'WhichKeyValue', { fg = colors.norm })
 
   -- lspsaga
-  highlight(0, 'DiagnosticWarning', { link = "DiagnosticWarn" })
-  highlight(0, 'DiagnosticInformation', { link = "DiagnosticInfo" })
+  highlight(0, 'DiagnosticWarning', { link = 'DiagnosticWarn' })
+  highlight(0, 'DiagnosticInformation', { link = 'DiagnosticInfo' })
 
   -- neovim
   highlight(0, 'healthError', { fg = colors.dark_red })
@@ -386,18 +386,12 @@ M.colorscheme = function()
 
   -- dashboard
   highlight(0, 'DashboardShortCut', { fg = colors.cyan })
-  highlight(0, 'DashboardHeader', { fg = colors.blue }
-  )
-  highlight(0, 'DashboardCenter', { fg = colors.magenta }
-  )
-  highlight(0, 'DashboardFooter', { fg = colors.blue }
-  )
-  highlight(0, 'DashboardKey', { fg = colors.red }
-  )
-  highlight(0, 'DashboardDesc', { fg = colors.cyan }
-  )
-  highlight(0, 'DashboardIcon', { fg = colors.cyan, bold = true }
-  )
+  highlight(0, 'DashboardHeader', { fg = colors.blue })
+  highlight(0, 'DashboardCenter', { fg = colors.magenta })
+  highlight(0, 'DashboardFooter', { fg = colors.blue })
+  highlight(0, 'DashboardKey', { fg = colors.red })
+  highlight(0, 'DashboardDesc', { fg = colors.cyan })
+  highlight(0, 'DashboardIcon', { fg = colors.cyan, bold = true })
 
   -- alpha
   highlight(0, 'AlphaShortcut', { fg = colors.red })
