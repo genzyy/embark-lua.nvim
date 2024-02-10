@@ -370,6 +370,48 @@ M.colorscheme = function()
 
   -- notify
   highlight(0, 'NotifyBackground', { fg = colors.norm, bg = colors.bg_dark })
+
+  -- gitgutter
+  highlight(0, 'GitGutterAdd', { fg = colors.diff_add })
+  highlight(0, 'GitGutterChange', { fg = colors.diff_changed })
+  highlight(0, 'GitGutterDelete', { fg = colors.diff_del })
+  highlight(0, 'GitGutterAddLineNr', { fg = colors.diff_add })
+  highlight(0, 'GitGutterChangeLineNr', { fg = colors.diff_changed })
+  highlight(0, 'GitGutterDeleteLineNr', { fg = colors.diff_del })
+
+  -- gitsigns
+  highlight(0, 'GitSignsAdd', { fg = colors.diff_add })
+  highlight(0, 'GitSignsChange', { fg = colors.diff_changed })
+  highlight(0, 'GitSignsDelete', { fg = colors.diff_del })
+
+  -- dashboard
+  highlight(0, 'DashboardShortCut', { fg = colors.cyan })
+  highlight(0, 'DashboardHeader', { fg = colors.blue }
+  )
+  highlight(0, 'DashboardCenter', { fg = colors.magenta }
+  )
+  highlight(0, 'DashboardFooter', { fg = colors.blue }
+  )
+  highlight(0, 'DashboardKey', { fg = colors.red }
+  )
+  highlight(0, 'DashboardDesc', { fg = colors.cyan }
+  )
+  highlight(0, 'DashboardIcon', { fg = colors.cyan, bold = true }
+  )
+
+  -- alpha
+  highlight(0, 'AlphaShortcut', { fg = colors.red })
+  highlight(0, 'AlphaHeader', { fg = colors.blue })
+  highlight(0, 'AlphaHeaderLabel', { fg = colors.red })
+  highlight(0, 'AlphaFooter', { fg = colors.blue })
+  highlight(0, 'AlphaButtons', { fg = colors.cyan })
+
+  -- sneak
+  highlight(0, 'Sneak', { fg = colors.bg_bright, bg = colors.magenta })
+  highlight(0, 'SneakScope', { bg = colors.visual })
+
+  -- noice
+  highlight(0, 'NoiceCompletionItemKindDefault', { fg = colors.norm })
 end
 
 return M
