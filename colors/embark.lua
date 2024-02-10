@@ -1,2 +1,2 @@
-vim.o.background = "dark"
-require("embark").colorscheme()
+vim.o.background = 'dark'
+require('embark').colorscheme()
