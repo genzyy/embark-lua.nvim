@@ -28,6 +28,8 @@ local colors = {
   cyan = '#ABF8F7',
   dark_cyan = '#63f2f1',
 
+  magenta = '#bb9af7',
+
   norm = '#cbe3e7',
   norm_subtle = '#8A889D',
   visual = '#3E3859',
@@ -334,6 +336,40 @@ M.colorscheme = function()
   highlight(0, 'NoiceCompletionItemKindDefault', { fg = colors.green })
   highlight(0, 'NoiceConfirmBorder', { fg = colors.norm })
   highlight(0, 'NoiceFormatTitle', { fg = colors.norm })
+
+  -- telescope
+  highlight(0, 'TelescopeNormal', { bg = colors.bg_dark })
+
+  -- nvimtree
+  highlight(0, 'NvimTreeNormal', { fg = colors.norm, bg = colors.bg_dark })
+  highlight(0, 'NvimTreeNormalNC', { fg = colors.norm, bg = colors.bg_dark })
+
+  -- neotree
+  highlight(0, 'NeoTreeNormal', { fg = colors.norm, bg = colors.bg_dark })
+  highlight(0, 'NeoTreeNormalNC', { fg = colors.norm, bg = colors.bg_dark })
+
+  --whichkey
+  highlight(0, 'WhichKey', { fg = colors.cyan })
+  highlight(0, 'WhichKeyGroup', { fg = colors.blue })
+  highlight(0, 'WhichKeyDesc', { fg = colors.magenta })
+  highlight(0, 'WhichKeySeperator', { fg = colors.norm_subtle })
+  highlight(0, 'WhichKeyFloat', { fg = colors.bg_dark })
+  highlight(0, 'WhichKeyValue', { fg = colors.norm })
+
+  -- lspsaga
+  highlight(0, 'DiagnosticWarning', { link = "DiagnosticWarn" })
+  highlight(0, 'DiagnosticInformation', { link = "DiagnosticInfo" })
+
+  -- neovim
+  highlight(0, 'healthError', { fg = colors.dark_red })
+  highlight(0, 'healthSuccess', { fg = colors.green })
+  highlight(0, 'healthWarning', { fg = colors.dark_yellow })
+
+  -- bufferline
+  highlight(0, 'BufferLineIndicatorSelected', { fg = colors.diff_changed })
+
+  -- notify
+  highlight(0, 'NotifyBackground', { fg = colors.norm, bg = colors.bg_dark })
 end
 
 return M
