@@ -91,9 +91,23 @@ require('lualine').setup {
 }
 ```
 
+### User configuration
+
+```lua
+  config = function()
+    require("embark").setup({
+      styles = {
+        keywords = { italic = true, bold = true }, -- default
+        comments = { italic = true, bold = false }, -- default
+      },
+    })
+  end
+
+```
+
 
 ### Todo
 
-- [ ] user configuration.
-- [ ] support for other nvim plugins.
+- [x] user configuration.
+- [x] support for other nvim plugins.
 - [ ] light variant.
