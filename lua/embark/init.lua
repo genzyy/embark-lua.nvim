@@ -6,6 +6,7 @@ local M = {}
 --- @class StyleProps
 --- @field bold boolean
 --- @field italic boolean
+-- stylua: ignore
 local style_props = {
   bold = true,
   italic = true,
