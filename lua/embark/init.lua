@@ -3,14 +3,15 @@ local none = 'NONE'
 
 local M = {}
 
+-- stylua: ignore start
 --- @class StyleProps
 --- @field bold boolean
 --- @field italic boolean
--- stylua: ignore
 local style_props = {
   bold = true,
   italic = true,
 }
+-- stylua: ignore end
 
 --- @class EmbarkConf
 --- @field styles table
