@@ -89,6 +89,7 @@ require('lualine').setup {
     theme = 'embark',
   }
 }
+```
 
 ### User configuration
 
@@ -102,7 +103,6 @@ require('lualine').setup {
     })
   end
 
-```
 ```
 
 
