@@ -19,7 +19,7 @@ M.config = {
     keywords = { bold = true, italic = true },
     --- @type StyleProps
     comments = { bold = false, italic = true },
-  }
+  },
 }
 
 --- @param config EmbarkConf?
@@ -34,8 +34,8 @@ function M.setup(config)
         comments = {
           italic = config.styles.comments.italic or M.config.styles.comments.italic,
           bold = config.styles.comments.bold or M.config.styles.comments.bold,
-        }
-      }
+        },
+      },
     }
   end
 end
@@ -86,8 +86,7 @@ M.colorscheme = function()
   highlight(0, 'ModeMsg', { fg = colors.norm_subtle })
 
   -- Comments
-  highlight(0, 'Comment',
-    { fg = colors.norm_subtle, bold = M.config.styles.comments.bold, italic = M.config.styles.comments.italic })
+  highlight(0, 'Comment', { fg = colors.norm_subtle, bold = M.config.styles.comments.bold, italic = M.config.styles.comments.italic })
 
   -- Functions
   highlight(0, 'Function', { fg = colors.red })
@@ -332,8 +331,7 @@ M.colorscheme = function()
   highlight(0, '@lsp.type.operator', { link = '@operator' })
   highlight(0, '@lsp.type.parameter', { link = '@parameter' })
   highlight(0, '@lsp.type.property', { link = '@property' })
-  highlight(0, '@lsp.type.selfKeyword',
-    { link = '@variable.builtin', bold = M.config.styles.keywords.bold, italic = M.config.styles.keywords.italic, })
+  highlight(0, '@lsp.type.selfKeyword', { link = '@variable.builtin', bold = M.config.styles.keywords.bold, italic = M.config.styles.keywords.italic })
   highlight(0, '@lsp.type.selfParameter', { link = '@variable.builtin' })
   highlight(0, '@lsp.type.string', { link = '@string' })
   highlight(0, '@lsp.type.struct', { link = '@type' })
