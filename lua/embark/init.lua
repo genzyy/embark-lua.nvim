@@ -7,10 +7,10 @@ local M = {}
 --- @class StyleProps
 --- @field bold boolean
 --- @field italic boolean
-local style_props = {
-  bold = true,
-  italic = true,
-}
+-- local style_props = {
+--   bold = true,
+--   italic = true,
+-- }
 -- stylua: ignore end
 
 --- @class EmbarkConf
