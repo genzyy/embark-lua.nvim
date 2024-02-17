@@ -109,5 +109,5 @@ require('lualine').setup {
 ### Todo
 
 - [x] user configuration.
-- [ ] support for other nvim plugins.
+- [x] support for other nvim plugins.
 - [ ] light variant.
