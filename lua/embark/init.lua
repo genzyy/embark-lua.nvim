@@ -12,8 +12,8 @@ local style_props = {
 }
 
 --- @class EmbarkConf
---- @field style table
- M.config = {
+--- @field styles table
+M.config = {
   styles = {
     --- @type StyleProps
     keywords = { bold = true, italic = true },
@@ -21,6 +21,24 @@ local style_props = {
     comments = { bold = false, italic = true },
   }
 }
+
+--- @param config EmbarkConf?
+function M.setup(config)
+  if config ~= nil then
+    M.config = {
+      styles = {
+        keywords = {
+          italic = config.styles.keywords.italic or M.config.styles.keywords.italic,
+          bold = config.styles.keywords.bold or M.config.styles.keywords.bold,
+        },
+        comments = {
+          italic = config.styles.comments.italic or M.config.styles.comments.italic,
+          bold = config.styles.comments.bold or M.config.styles.comments.bold,
+        }
+      }
+    }
+  end
+end
 
 local colors = {
   bg = '#1e1c31',
